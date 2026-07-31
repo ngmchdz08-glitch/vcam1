@@ -16,10 +16,11 @@ jobs:
         with:
           repository: roothide/theos
           path: theos
+          submodules: recursive
           
       - name: Install Dependencies
         run: |
-          brew install ldid xz
+          brew install ldid xz dpkg
           
       - name: Build Tweak
         run: |
