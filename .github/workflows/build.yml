@@ -17,6 +17,10 @@ jobs:
           repository: roothide/theos
           path: theos
           
+      - name: Install Dependencies
+        run: |
+          brew install ldid xz
+          
       - name: Build Tweak
         run: |
           export THEOS=$GITHUB_WORKSPACE/theos
